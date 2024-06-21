@@ -58,3 +58,6 @@ def deleteRoom(request, pk):
         return redirect('home')
     
     return render(request, 'test_app/delete.html', {'obj':room})
+
+def samplePage(request):
+    return render(request, 'test_app/test.html')

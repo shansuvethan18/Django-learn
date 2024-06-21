@@ -1,0 +1,138 @@
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sample HTML Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      header,
+      footer {
+        background-color: #f8f9fa;
+        padding: 10px;
+        text-align: center;
+      }
+      nav {
+        margin-bottom: 20px;
+      }
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      nav ul li {
+        display: inline;
+        margin-right: 10px;
+      }
+      .content {
+        margin-bottom: 20px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to My Sample Page</h1>
+      <p>Learning HTML basics with a sample web page</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#section1">Home</a></li>
+        <li><a href="#section2">About</a></li>
+        <li><a href="#section3">Services</a></li>
+        <li><a href="#section4">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="content">
+      <section id="section1">
+        <h2>Home</h2>
+        <p>
+          This is the home section. Here you can find an overview of what this
+          website is about.
+        </p>
+      </section>
+
+      <section id="section2">
+        <h2>About</h2>
+        <p>
+          This section provides information about our company and our mission.
+        </p>
+        <h3>Our Team</h3>
+        <p>We have a diverse team of experts in various fields.</p>
+      </section>
+
+      <section id="section3">
+        <h2>Services</h2>
+        <p>We offer a wide range of services to meet your needs.</p>
+        <ul>
+          <li>Service 1</li>
+          <li>Service 2</li>
+          <li>Service 3</li>
+        </ul>
+        <h3>Service Details</h3>
+        <table>
+          <tr>
+            <th>Service</th>
+            <th>Description</th>
+            <th>Price</th>
+          </tr>
+          <tr>
+            <td>Service 1</td>
+            <td>High-quality service 1</td>
+            <td>$100</td>
+          </tr>
+          <tr>
+            <td>Service 2</td>
+            <td>High-quality service 2</td>
+            <td>$200</td>
+          </tr>
+          <tr>
+            <td>Service 3</td>
+            <td>High-quality service 3</td>
+            <td>$300</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="section4">
+        <h2>Contact</h2>
+        <p>
+          If you have any questions, feel free to contact us using the form
+          below:
+        </p>
+        <form action="#" method="post">
+          <label for="name">Name:</label><br />
+          <input type="text" id="name" name="name" /><br /><br />
+          <label for="email">Email:</label><br />
+          <input type="email" id="email" name="email" /><br /><br />
+          <label for="message">Message:</label><br />
+          <textarea id="message" name="message" rows="4" cols="50"></textarea
+          ><br /><br />
+          <input type="submit" value="Submit" />
+        </form>
+      </section>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Sample HTML Page. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
+{% endblock content %}
