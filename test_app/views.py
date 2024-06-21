@@ -61,3 +61,6 @@ def deleteRoom(request, pk):
 
 def samplePage(request):
     return render(request, 'test_app/test.html')
+
+def samplePage2(request):
+    return render(request, 'test_app/test2.html')
