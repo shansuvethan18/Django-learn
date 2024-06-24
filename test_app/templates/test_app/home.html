@@ -8,20 +8,7 @@
 </style>
 
 <div class="home-container">
-  <div>
-    <h3>Browse Topics</h3>
-    <hr />
-
-    <div>
-      <a href="{% url 'home' %}">All</a>
-    </div>
-    {% for topic in topics %}
-    <div>
-      <a href="{% url 'home' %}?q={{topic.name}}">{{topic.name}}</a>
-    </div>
-
-    {% endfor %}
-  </div>
+  <div>{% include 'test_app/topic_components.html' %}</div>
 
   <div>
     <h5>{{room_count}} rooms available</h5>
@@ -29,40 +16,12 @@
     {% comment %}
     <a href="{% url 'sample' %}">Test page</a>
     <a href="{% url 'sample2' %}">Test page2</a>
-    {% endcomment %} {% for room in rooms %}
-    <div>
-      {% if request.user == room.host %}
-      <a href="{% url 'update-room' room.id %}">Edit</a>
-      <a href="{% url 'delete-room' room.id %}">Delete</a>
-      {% endif %}
-
-      <span>@{{room.host.username}}</span>
-
-      <h5>
-        {{room.id}} --
-        <a href="{% url 'room' room.id %}"> {{room.name}} </a>
-      </h5>
-      <small> {{room.topic.name}} </small>
-      <hr />
-    </div>
-
-    {% endfor %}
+    {% endcomment %}
+    <hr />
+    {% include 'test_app/feed_components.html' %}
   </div>
 
-  <div>
-    <h3>Recent Activities</h3>
-    <hr />
-    {% for message in room_messages %}
-    <small>@{{message.user}} {{message.created | timesince}}</small>
-    <small>Replied to "{{message.room}}"</small>
-    <hr />
-    <p>{{message}}</p>
-    {% if request.user == message.user %}
-    <a href="{% url 'delete-message' message.id %}">Delete</a>
-    {% endif %}
-    <hr />
-    {% endfor %}
-  </div>
+  <div>{% include 'test_app/activity_components.html' %}</div>
 </div>
 
 {% endblock content %}
