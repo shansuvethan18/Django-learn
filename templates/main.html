@@ -1,5 +1,5 @@
 <<!DOCTYPE html>
-
+{% load static %}
 <html>
   <head>
     <meta charset="utf-8" />
@@ -7,6 +7,12 @@
     <title>Learn Django</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="{% static 'styles/main.css'%}"
+    />
   </head>
   <body>
     {% include "navbar.html" %} {% if messages %}
@@ -15,6 +21,8 @@
       <li>{{ message }}</li>
       {% endfor %}
     </ul>
-    {% endif %} {% block content %} {% endblock content %}
+    {% endif %}
+    <img src="{% static 'images/Movie 1.png'%}" alt="" />
+    {% block content %} {% endblock content %}
   </body>
 </html>
