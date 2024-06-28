@@ -127,7 +127,7 @@ def createRoom(request):
             host=request.user,
             topic=topic,
             name=request.POST.get('name'),
-            description= request.POST.get('desciption')
+            description= request.POST.get('description')
 
         )
 
