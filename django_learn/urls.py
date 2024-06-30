@@ -23,6 +23,6 @@ urlpatterns = [
     path ('playground/', include('playground.urls')),
     path ("" , include('test_app.urls')),
     path ("api" , include('test_app.api.urls')),
-    path ("test2/" , include('test_app2.urls')),
+    #path ("test2/" , include('test_app2.urls')),
     path("__debug__/", include("debug_toolbar.urls")),
 ]
