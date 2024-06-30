@@ -214,7 +214,9 @@ def updateUser(request):
     return render(request, 'test_app/update-user.html', context)
 
 def topicsPage(request):
-      return render(request, 'test_app/topics.html', {})
+      q = request.GET.get('q') if request.GET.get('q') != None else ''
+      topics= Topic.objects.filter(name__icontains=q)
+      return render(request, 'test_app/topics.html', {'topics':topics})
 
 def activityPage(request):
       return render(request, 'test_app/activity.html', {})
