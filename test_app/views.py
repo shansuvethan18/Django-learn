@@ -212,3 +212,9 @@ def updateUser(request):
 
     context={'form':form}
     return render(request, 'test_app/update-user.html', context)
+
+def topicsPage(request):
+      return render(request, 'test_app/topics.html', {})
+
+def activityPage(request):
+      return render(request, 'test_app/activity.html', {})
