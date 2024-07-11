@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-epj+l$w$&v6bp533p+@5-6bd7s1k=u0d1lauz#x96*lrf29w^^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'playground',
-    
+    'debug_toolbar',
     'store',
     'tags',
     'test_app',
@@ -46,7 +46,7 @@ INSTALLED_APPS = [
 
     'corsheaders',
 
-    'test_app2'
+
     
     
 ]
